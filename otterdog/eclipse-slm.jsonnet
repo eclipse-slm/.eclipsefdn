@@ -13,6 +13,13 @@ orgs.newOrg('eclipse-slm') {
     },
   },
   _repositories+:: [
+    orgs.newRepo('.github') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('ansible') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -74,6 +81,13 @@ orgs.newOrg('eclipse-slm') {
         },
       ],
     },
+    orgs.newRepo('slm-aas') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('slm-ansible-role-basyx-server') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -110,6 +124,13 @@ orgs.newOrg('eclipse-slm') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('slm-cc-base') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('slm-dc-codesys') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -168,6 +189,13 @@ orgs.newOrg('eclipse-slm') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('slm-dc-k8s') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('slm-monitoring-prometheus-aas') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
