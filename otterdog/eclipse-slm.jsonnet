@@ -22,6 +22,12 @@ orgs.newOrg('eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('ansible-collection-aas') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('awx') {
       allow_merge_commit: true,
       allow_update_branch: false,
