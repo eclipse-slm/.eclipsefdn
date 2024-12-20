@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-slm') {
+orgs.newOrg('dt.slm', 'eclipse-slm') {
   settings+: {
     description: "",
     name: "Eclipse Service Lifecycle Management",
