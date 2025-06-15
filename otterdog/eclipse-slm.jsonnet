@@ -47,6 +47,7 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('information-receiving-service') {
+      description: "Service for aggregating (remote) Asset Administration Shells (AAS) from different sources",
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
