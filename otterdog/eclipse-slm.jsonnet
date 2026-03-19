@@ -125,6 +125,9 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
         orgs.newRepoSecret('RUNNER_PRIVATE_KEY') {
           value: "********",
         },
+        orgs.newRepoSecret('COVERALLS_REPO_TOKEN') {
+          value: "********",
+        },
       ],
       environments: [
         orgs.newEnvironment('build-core'),
