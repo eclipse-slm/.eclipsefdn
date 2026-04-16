@@ -9,8 +9,31 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/dt.slm/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/dt.slm/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/dt.slm/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/dt.slm/central.sonatype.org/token-password",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/dt.slm/central.sonatype.org/token-username",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('aas-sdk') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -40,13 +63,32 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('awx-client') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('awx-execution-environment') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('awx-jwt-authenticator') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('consul-client') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('information-receiving-service') {
+      description: "Service for aggregating (remote) Asset Administration Shells (AAS) from different sources",
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -81,6 +123,9 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('RUNNER_PRIVATE_KEY') {
+          value: "********",
+        },
+        orgs.newRepoSecret('COVERALLS_REPO_TOKEN') {
           value: "********",
         },
       ],
@@ -221,6 +266,12 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('slm-terraform') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('vault-client') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
