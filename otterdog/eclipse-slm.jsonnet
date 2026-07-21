@@ -189,19 +189,13 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('slm-ansible-role-podman') {
-      description: "Ansible role for Podman",
+    orgs.newRepo('slm-ansible-role-inventory-helper') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
-      topics: [
-        "ansible",
-        "ansible-role",
-        "podman",
-      ],
     },
-    orgs.newRepo('slm-ansible-role-inventory-helper') {
+    orgs.newRepo('slm-ansible-role-keycloak-client') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -218,6 +212,18 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+    },
+    orgs.newRepo('slm-ansible-role-podman') {
+      description: "Ansible role for Podman",
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      topics: [
+        "ansible",
+        "ansible-role",
+        "podman",
+      ],
     },
     orgs.newRepo('slm-ansible-role-python') {
       allow_merge_commit: true,
