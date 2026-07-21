@@ -57,12 +57,6 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('ansible-role-resource-self-description-service') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      web_commit_signoff_required: false,
-    },
     orgs.newRepo('awx') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -165,6 +159,12 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('slm-ansible-role-awx-client') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('slm-ansible-role-basyx-server') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -235,6 +235,12 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       aliases: [
         "slm-ansible-role-rabbitmq",
       ],
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('ansible-role-resource-self-description-service') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
