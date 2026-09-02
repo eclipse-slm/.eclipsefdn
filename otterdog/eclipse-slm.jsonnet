@@ -55,6 +55,13 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      description: "Ansible Collection for managing SLM Setups",
+      homepage: "",
+      topics+: [
+        "ansible",
+        "eclipse-slm",
+        "molecule"
+      ],
       web_commit_signoff_required: false,
     },
     orgs.newRepo('awx') {
@@ -211,6 +218,8 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      description: "This role deploys LiteLLM with Docker Compose on a target host.",
+      homepage: "",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('slm-ansible-role-minio-client') {
