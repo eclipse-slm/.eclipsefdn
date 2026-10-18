@@ -113,7 +113,13 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('molecule_vsphere') {
+    orgs.newRepo('molecule_docker') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('molecule_generic') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -125,7 +131,13 @@ orgs.newOrg('dt.slm', 'eclipse-slm') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('molecule_docker') {
+    orgs.newRepo('molecule_openstack') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('molecule_vsphere') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
